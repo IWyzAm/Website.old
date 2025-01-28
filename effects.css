@@ -1,0 +1,204 @@
+.main-character {
+    font-size: large;
+}
+
+.text-glow-light {
+    color: #ffffff;
+    text-shadow: 
+        0 0 10px #ffffff,
+        0 0 20px #87CEFA,
+        0 0 30px #4169E1,
+        0 0 40px #0000FF;
+    animation: text-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes text-glow {
+    from {
+        text-shadow: 
+            0 0 10px #ffffff,
+            0 0 20px #87CEFA,
+            0 0 30px #4169E1,
+            0 0 40px #0000FF;
+    }
+    to {
+        text-shadow: 
+            0 0 15px #ffffff,
+            0 0 25px #87CEFA,
+            0 0 35px #4169E1,
+            0 0 45px #0000FF;
+    }
+}
+
+/* Glitch Text Effect */
+.text-glitch {
+    position: relative;
+    color: #fff;
+    text-shadow: 
+        0 0 5px #ff00de, 
+        0 0 10px #ff00de;
+    animation: glitch 0.5s infinite;
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-5px, 5px); }
+    40% { transform: translate(-5px, -5px); }
+    60% { transform: translate(5px, 5px); }
+    80% { transform: translate(5px, -5px); }
+    100% { transform: translate(0); }
+}
+
+/* Bleeding Text Effect */
+.text-bleeding {
+    color: #8b0000;
+    position: relative;
+    text-shadow: 
+        3px 3px 5px rgba(139, 0, 0, 0.7),
+        -3px -3px 5px rgba(139, 0, 0, 0.7),
+        0 0 10px rgba(255, 0, 0, 0.9);
+    animation: bleed 1.2s infinite alternate;
+    letter-spacing: 1px;
+    transform-origin: center;
+}
+
+@keyframes bleed {
+    0% { 
+        opacity: 0.6; 
+        text-shadow: 
+            4px 4px 8px rgba(139, 0, 0, 0.9),
+            -4px -4px 8px rgba(139, 0, 0, 0.9),
+            0 0 15px rgba(255, 0, 0, 1);
+        transform: scale(1.02) skew(-2deg, 1deg);
+    }
+    100% { 
+        opacity: 1; 
+        text-shadow: 
+            5px 5px 10px rgba(139, 0, 0, 1),
+            -5px -5px 10px rgba(139, 0, 0, 1),
+            0 0 20px rgba(255, 0, 0, 1.2);
+        transform: scale(1.03) skew(2deg, -1deg);
+    }
+}
+
+.yeppii-text {
+    text-align: left;  /* Bypasses center alignment */
+    display: inline-block;  /* Allows text-align to work */
+    color: #ffffff;
+    text-shadow: 
+        0 0 10px #ffffff,
+        0 0 20px #87CEFA,
+        0 0 30px #4169E1,
+        0 0 40px #0000FF;
+    animation: yeppii-text 1s ease-in-out infinite;
+}
+
+@keyframes yeppii-text {
+    0%, 100% {
+        text-shadow: 
+            0 0 10px #ffffff,
+            0 0 20px #87CEFA,
+            0 0 30px #4169E1,
+            0 0 40px #0000FF;
+        transform: translateY(0) rotate(0deg);
+    }
+    25% {
+        text-shadow: 
+            0 0 15px #ffffff,
+            0 0 25px #87CEFA,
+            0 0 35px #4169E1,
+            0 0 45px #0000FF;
+        transform: translateY(-15px) rotate(-5deg);
+    }
+    50% {
+        transform: translateY(0) rotate(0deg);
+    }
+    75% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+}
+
+
+/* Decay Text Effect */
+.text-decay {
+    color: #4a4a4a;
+    letter-spacing: 2px;
+    text-shadow: 
+        0 0 10px rgba(74, 74, 74, 0.5);
+    animation: decay 10s infinite alternate;
+}
+
+@keyframes decay {
+    0% { opacity: 1; letter-spacing: 2px; }
+    100% { opacity: 0.2; letter-spacing: 4.5px; }
+}
+
+/* Haunting Text Effect */
+.text-haunting {
+    color: #ffffff;
+    text-shadow: 
+        0 0 10px #00ff00,
+        0 0 20px #00ff00,
+        0 0 30px #00ff00;
+    animation: haunting 3s infinite alternate;
+}
+
+@keyframes haunting {
+    from { opacity: 0.6; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1.02); }
+}
+
+.star {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 255, 255);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(0.7); }
+    100% { opacity: 1; transform: scale(1.2); }
+}
+
+.timeless {
+    font-family: "Jersey 10", serif;
+    font-weight: 400;
+    font-size: 200%;
+    font-style: normal;
+}
+
+.rain {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.drop {
+    position: absolute;
+    bottom: 100%;
+    width: 2px;
+    height: 50px;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.25));
+    animation: drop 0.5s linear infinite;
+}
+
+@keyframes drop {
+    0% {
+        transform: translateY(0vh);
+    }
+    75% {
+        transform: translateY(100vh);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.invisible {
+    color: transparent;
+    max-height: 1% !important;
+}
